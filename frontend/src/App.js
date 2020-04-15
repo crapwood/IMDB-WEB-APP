@@ -1,9 +1,17 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import React from "react";
+import { Route, BrowserRouter as Router } from "react-router-dom";
+
+// PAGES
+import Home from "./pages/home.js";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Router>
+      <Route exact path="/" component={Home} />
+    </Router>
+  );
 }
 
 export default App;
