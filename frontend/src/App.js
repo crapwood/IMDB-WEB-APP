@@ -19,7 +19,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/movies" component={Movies} />
             <Route exact path="/tvshows" component={TvShows} />
-            <Route exact path="/advance-search" component={Search} />
+            <Route exact path="/advanced-search" component={Search} />
           </Switch>
         </div>
       </Router>

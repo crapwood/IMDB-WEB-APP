@@ -11,13 +11,13 @@ const NavBar = (props) => {
           <Link to="/">Home</Link>
         </Button>
         <Button>
-          <Link to="/">MOVIES</Link>
+          <Link to="/movies">MOVIES</Link>
         </Button>
         <Button>
-          <Link to="/">TV SHOWS</Link>
+          <Link to="/tvshows">TV SHOWS</Link>
         </Button>
         <Button>
-          <Link to="/">ADVANCED SEARCH</Link>
+          <Link to="/advanced-search">ADVANCED SEARCH</Link>
         </Button>
       </ButtonGroup>
     </>
