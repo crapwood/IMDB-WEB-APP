@@ -5,20 +5,21 @@ import Button from "@material-ui/core/Button";
 const NavBar = (props) => {
   return (
     <>
-      <Button>dsdsd</Button>
-      <Button variant="contained">
-        <Link to="/">Home</Link>
-      </Button>
-      <Button variant="contained">
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <Button variant="contained" color="primary">
+          Home
+        </Button>
+      </Link>
+      <Button variant="contained" color="primary">
         <Link to="/">Latest</Link>
       </Button>
-      <Button variant="contained">
+      <Button variant="contained" color="primary">
         <Link to="/">Example</Link>
       </Button>
-      <Button variant="contained">
+      <Button variant="contained" color="primary">
         <Link to="/">Options</Link>
       </Button>
-      <Button variant="contained">
+      <Button variant="contained" color="primary">
         <Link to="/">Sample</Link>
       </Button>
     </>
