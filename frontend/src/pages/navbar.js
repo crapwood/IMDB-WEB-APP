@@ -1,27 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 const NavBar = (props) => {
   return (
     <>
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <Button variant="contained" color="primary">
-          Home
+      <ButtonGroup color="primary" aria-label="outlined primary button group">
+        <Button>
+          <Link to="/">Home</Link>
         </Button>
-      </Link>
-      <Button variant="contained" color="primary">
-        <Link to="/">Latest</Link>
-      </Button>
-      <Button variant="contained" color="primary">
-        <Link to="/">Example</Link>
-      </Button>
-      <Button variant="contained" color="primary">
-        <Link to="/">Options</Link>
-      </Button>
-      <Button variant="contained" color="primary">
-        <Link to="/">Sample</Link>
-      </Button>
+        <Button>
+          <Link to="/">Latest</Link>
+        </Button>
+        <Button>
+          <Link to="/">Example</Link>
+        </Button>
+        <Button>
+          <Link to="/">Options</Link>
+        </Button>
+        <Button>
+          <Link to="/">Sample</Link>
+        </Button>
+      </ButtonGroup>
     </>
   );
 };
