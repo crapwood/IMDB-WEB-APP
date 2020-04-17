@@ -1,16 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 const NavBar = (props) => {
   return (
     <>
-      <button>
+      <Button>dsdsd</Button>
+      <Button variant="contained">
         <Link to="/">Home</Link>
-      </button>
-      <Link to="/">Latest</Link>
-      <Link to="/">Example</Link>
-      <Link to="/">Options</Link>
-      <Link to="/">Sample</Link>
+      </Button>
+      <Button variant="contained">
+        <Link to="/">Latest</Link>
+      </Button>
+      <Button variant="contained">
+        <Link to="/">Example</Link>
+      </Button>
+      <Button variant="contained">
+        <Link to="/">Options</Link>
+      </Button>
+      <Button variant="contained">
+        <Link to="/">Sample</Link>
+      </Button>
     </>
   );
 };
