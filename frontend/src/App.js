@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Nav from "./pages/navbar";
+import Footer from "./pages/footer";
 
 // PAGES
 import Home from "./pages/Home/home.js";
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/tvshows" component={TvShows} />
             <Route exact path="/advanced-search" component={Search} />
           </Switch>
+          <Footer />
         </div>
       </Router>
     </>
