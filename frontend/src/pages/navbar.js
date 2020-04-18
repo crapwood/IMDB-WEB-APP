@@ -20,6 +20,7 @@ const NavBar = (props) => {
           <Link to="/advanced-search">ADVANCED SEARCH</Link>
         </Button>
       </ButtonGroup>
+      <input type="text" placeholder="Search.."></input>
     </>
   );
 };
