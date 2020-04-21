@@ -15,6 +15,7 @@ const Home = (props) => {
     <>
       <h1>HOME</h1>
       <p>TODO: put grid here of thumbnails of movies poster</p>
+      <p>Add ratings from omdb</p>
       <button onClick={getLatestMovies}>Click!!!</button>
     </>
   );
