@@ -8,6 +8,7 @@ const Footer = (props) => {
       <a href="https://facebook.com">facebook</a>
       <a href="https://twitter.com">twitter</a>
       <a href="https://linkedin.com">linkedin</a>
+      <p>follow me on</p>
     </>
   );
 };
