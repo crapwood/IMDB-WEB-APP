@@ -14,7 +14,7 @@ const Home = (props) => {
   return (
     <>
       <h1>HOME</h1>
-
+      <p>TODO: put grid here of thumbnails of movies poster</p>
       <button onClick={getLatestMovies}>Click!!!</button>
     </>
   );
