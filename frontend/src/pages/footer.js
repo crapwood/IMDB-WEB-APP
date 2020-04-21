@@ -5,6 +5,7 @@ const Footer = (props) => {
     <>
       <p>All rights reserved @ James Benitez</p>
       <a href="https://github.com">github</a>
+      <a href="https://github.com">github</a>
     </>
   );
 };
