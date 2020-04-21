@@ -7,6 +7,7 @@ const Footer = (props) => {
       <a href="https://github.com">github</a>
       <a href="https://facebook.com">facebook</a>
       <a href="https://twitter.com">twitter</a>
+      <a href="https://linkedin.com">linkedin</a>
     </>
   );
 };
