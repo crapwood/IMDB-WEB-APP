@@ -10,7 +10,7 @@ const NavBar = (props) => {
     <>
       <section className="nav-container">
         <ButtonGroup color="primary" aria-label="outlined primary button group">
-          <Button>
+          <Button variant="outlined">
             <Link to="/">Home</Link>
           </Button>
           <Button variant="outlined" color="primary">
