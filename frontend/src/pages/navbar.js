@@ -16,7 +16,7 @@ const NavBar = (props) => {
           <Button>
             <Link to="/movies">MOVIES</Link>
           </Button>
-          <Button>
+          <Button variant="outlined" color="secondary">
             <Link to="/tvshows">TV SHOWS</Link>
           </Button>
           <Button>
