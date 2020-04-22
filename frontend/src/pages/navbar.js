@@ -19,8 +19,9 @@ const NavBar = (props) => {
           <Button variant="outlined" color="secondary">
             <Link to="/tvshows">TV SHOWS</Link>
           </Button>
-          <Button>
-            <Link to="/advanced-search">ADVANCED SEARCH</Link>
+          <Button href="/advanced-search">
+            {/* <Link to="/advanced-search">ADVANCED SEARCH</Link> */}
+            ADVANCED SEARCH
           </Button>
         </ButtonGroup>
       </section>
