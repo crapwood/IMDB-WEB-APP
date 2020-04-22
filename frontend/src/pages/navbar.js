@@ -24,6 +24,7 @@ const NavBar = (props) => {
           </Button>
         </ButtonGroup>
       </section>
+      <hr />
     </>
   );
 };
