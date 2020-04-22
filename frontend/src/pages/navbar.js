@@ -13,7 +13,7 @@ const NavBar = (props) => {
           <Button>
             <Link to="/">Home</Link>
           </Button>
-          <Button>
+          <Button variant="outlined" color="primary">
             <Link to="/movies">MOVIES</Link>
           </Button>
           <Button variant="outlined" color="secondary">
