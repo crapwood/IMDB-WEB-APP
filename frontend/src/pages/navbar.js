@@ -66,6 +66,11 @@ const NavBar = (props) => {
                 TV SHOWS
               </Link>
             </li>
+            <li class="nav-item">
+              <Link className="nav-link" to="/advanced-search">
+                ADVANCED SEARCH
+              </Link>
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
