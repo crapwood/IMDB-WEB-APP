@@ -53,12 +53,17 @@ const NavBar = (props) => {
                 Home <span class="sr-only">(current)</span>
               </a> */}
               <Link className="nav-link" to="/">
-                Home <span class="sr-only">(current)</span>
+                HOME <span class="sr-only">(current)</span>
               </Link>
             </li>
             <li class="nav-item">
               <Link className="nav-link" to="/movies">
                 MOVIES
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link className="nav-link" to="/tvshows">
+                TV SHOWS
               </Link>
             </li>
             <li class="nav-item dropdown">
