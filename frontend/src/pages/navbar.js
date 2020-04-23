@@ -6,30 +6,6 @@ import "./navbar.css";
 const NavBar = (props) => {
   return (
     <>
-      {/* <section className="nav-container"> */}
-      {/* <ButtonGroup aria-label="outlined primary button group">
-          <Button variant="outlined">
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
-          </Button>
-          <Button variant="outlined">
-            <Link className="nav-link" to="/movies">
-              MOVIES
-            </Link>
-          </Button>
-          <Button variant="outlined">
-            <Link className="nav-link" to="/tvshows">
-              TV SHOWS
-            </Link>
-          </Button>
-          <Button variant="outlined">
-            <Link className="nav-link" to="/advanced-search">
-              ADVANCED SEARCH
-            </Link>
-          </Button>
-        </ButtonGroup> */}
-
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand nav-link" to="/">
           Home
@@ -95,16 +71,6 @@ const NavBar = (props) => {
                   Something else here
                 </a>
               </div>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
