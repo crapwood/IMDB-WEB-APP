@@ -57,9 +57,9 @@ const NavBar = (props) => {
               </Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Link
-              </a>
+              <Link className="nav-link" to="/movies">
+                MOVIES
+              </Link>
             </li>
             <li class="nav-item dropdown">
               <a
