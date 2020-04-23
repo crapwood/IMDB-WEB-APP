@@ -1,6 +1,11 @@
 .nav-container {
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+}
+.nav-link {
+  color: #ffff;
+  text-decoration: none;
 }

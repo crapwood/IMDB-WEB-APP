@@ -9,22 +9,30 @@ const NavBar = (props) => {
   return (
     <>
       <section className="nav-container">
-        <ButtonGroup color="primary" aria-label="outlined primary button group">
+        <ButtonGroup aria-label="outlined primary button group">
           <Button variant="outlined">
-            <Link to="/">Home</Link>
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
           </Button>
-          <Button variant="outlined" color="primary">
-            <Link to="/movies">MOVIES</Link>
+          <Button variant="outlined">
+            <Link className="nav-link" to="/movies">
+              MOVIES
+            </Link>
           </Button>
-          <Button variant="outlined" color="secondary">
-            <Link to="/tvshows">TV SHOWS</Link>
+          <Button variant="outlined">
+            <Link className="nav-link" to="/tvshows">
+              TV SHOWS
+            </Link>
           </Button>
-          <Button>
-            <Link to="/advanced-search">ADVANCED SEARCH</Link>
+          <Button variant="outlined">
+            <Link className="nav-link" to="/advanced-search">
+              ADVANCED SEARCH
+            </Link>
           </Button>
         </ButtonGroup>
       </section>
-      <hr />
+      {/* <hr /> */}
     </>
   );
 };
