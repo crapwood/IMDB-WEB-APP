@@ -27,22 +27,22 @@ const NavBar = (props) => {
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <Link className="nav-link" to="/">
-                HOME <span class="sr-only">(current)</span>
+                <h4>HOME</h4> <span class="sr-only">(current)</span>
               </Link>
             </li>
             <li class="nav-item">
               <Link className="nav-link" to="/movies">
-                MOVIES
+                <h4>MOVIES</h4>
               </Link>
             </li>
             <li class="nav-item">
               <Link className="nav-link" to="/tvshows">
-                TV SHOWS
+                <h4>TV SHOWS</h4>
               </Link>
             </li>
             <li class="nav-item">
               <Link className="nav-link" to="/advanced-search">
-                ADVANCED SEARCH
+                <h4>ADVANCED SEARCH</h4>
               </Link>
             </li>
             <li class="nav-item dropdown">

@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 const axios = require("axios");
 
 const Home = (props) => {
   const [moviesOnTheater, setMoviesOnTheater] = useState([]);
+
+  useEffect(() => {
+    getLatestMovies();
+  }, []);
 
   const getLatestMovies = async () => {
     try {
@@ -14,26 +18,24 @@ const Home = (props) => {
     } catch (error) {}
   };
 
-  const printData = () => {
-    return moviesOnTheater.map((movie) => (
+  const latestMovies = () => {
+    return moviesOnTheater.map((movie, index) => (
       <>
-        <img
-          src={" http://image.tmdb.org/t/p/w185/" + movie.poster_path}
-          alt="..."
-          class="img-thumbnail"
-        ></img>
-        <p>{movie.title}</p>
+        {index < 12 && (
+          <img
+            src={" http://image.tmdb.org/t/p/w185/" + movie.poster_path}
+            alt="..."
+            class="img-thumbnail"
+            alt={movie.title}
+          ></img>
+        )}
       </>
     ));
   };
 
   return (
     <>
-      <div class="container-fluid">
-        <button onClick={getLatestMovies}>Click!!!</button>
-        <hr />
-        {printData()}
-      </div>
+      <div class="container-fluid">{latestMovies()}</div>
     </>
   );
 };
