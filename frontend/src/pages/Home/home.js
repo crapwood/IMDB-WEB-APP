@@ -35,7 +35,12 @@ const Home = (props) => {
 
   return (
     <>
-      <div class="container-fluid">{latestMovies()}</div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <h5>NOW PLAYING IN THEATERS:</h5>
+        </div>
+        {latestMovies()}
+      </div>
     </>
   );
 };
