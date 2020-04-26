@@ -1,45 +1,51 @@
 import React, { useState, useEffect } from "react";
-const axios = require("axios");
+import Carousel from "./components/carousel";
+import "./home.css";
+import axios from "axios";
 
 const Home = (props) => {
   const [moviesOnTheater, setMoviesOnTheater] = useState([]);
 
   useEffect(() => {
+    const getLatestMovies = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
+        );
+        console.log(response.data.results);
+        setMoviesOnTheater([...response.data.results]);
+      } catch (error) {}
+    };
     getLatestMovies();
   }, []);
 
-  const getLatestMovies = async () => {
-    try {
-      const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=7d37867c5ca54dec639654f44aa6d8ab&language=en-US`
-      );
-      console.log(response.data.results);
-      setMoviesOnTheater([...response.data.results]);
-    } catch (error) {}
-  };
+  // const latestMovies = () => {
+  //   return moviesOnTheater.map((movie, index) => (
+  //     <>
+  //       {index < 12 && (
+  //         <>
+  //           <img
+  //             src={" http://image.tmdb.org/t/p/w185/" + movie.poster_path}
+  //             alt="..."
+  //             class="img-thumbnail"
+  //             alt={movie.title}
+  //           ></img>
+  //           <p>{movie.title}</p>
+  //         </>
+  //       )}
+  //     </>
+  //   ));
+  // };
 
   const latestMovies = () => {
-    return moviesOnTheater.map((movie, index) => (
-      <>
-        {index < 12 && (
-          <img
-            src={" http://image.tmdb.org/t/p/w185/" + movie.poster_path}
-            alt="..."
-            class="img-thumbnail"
-            alt={movie.title}
-          ></img>
-        )}
-      </>
-    ));
+    return <Carousel moviesOnTheater={moviesOnTheater} />;
   };
 
   return (
     <>
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <h5>NOW PLAYING IN THEATERS:</h5>
-        </div>
-        {latestMovies()}
+        {moviesOnTheater.length == 0 && <h3>Loading movies...</h3>}
+        {moviesOnTheater.length > 0 && latestMovies()}
       </div>
     </>
   );
