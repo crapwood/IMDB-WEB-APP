@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Suspense } from "react";
-
+import Carousel from "./components/carousel";
 import "./home.css";
 import axios from "axios";
 
-const Carousel = React.lazy(() => import("./components/carousel"));
+// const Carousel = React.lazy(() => import("./components/carousel"));
 
 const Home = (props) => {
   const [moviesOnTheater, setMoviesOnTheater] = useState([]);
@@ -30,7 +30,6 @@ const Home = (props) => {
       <div class="container-fluid">
         {moviesOnTheater.length == 0 && <h3>Loading movies...</h3>}
         {moviesOnTheater.length > 0 && latestMovies()}
-        {/* <Suspense fallback={<h3>Loading...</h3>}>{latestMovies()}</Suspense> */}
       </div>
     </>
   );
