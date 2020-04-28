@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Carousel from "./components/carousel";
+import React, { useState, useEffect, Suspense } from "react";
+
 import "./home.css";
 import axios from "axios";
+
+const Carousel = React.lazy(() => import("./components/carousel"));
 
 const Home = (props) => {
   const [moviesOnTheater, setMoviesOnTheater] = useState([]);
@@ -19,24 +21,6 @@ const Home = (props) => {
     getLatestMovies();
   }, []);
 
-  // const latestMovies = () => {
-  //   return moviesOnTheater.map((movie, index) => (
-  //     <>
-  //       {index < 12 && (
-  //         <>
-  //           <img
-  //             src={" http://image.tmdb.org/t/p/w185/" + movie.poster_path}
-  //             alt="..."
-  //             class="img-thumbnail"
-  //             alt={movie.title}
-  //           ></img>
-  //           <p>{movie.title}</p>
-  //         </>
-  //       )}
-  //     </>
-  //   ));
-  // };
-
   const latestMovies = () => {
     return <Carousel moviesOnTheater={moviesOnTheater} />;
   };
@@ -46,6 +30,7 @@ const Home = (props) => {
       <div class="container-fluid">
         {moviesOnTheater.length == 0 && <h3>Loading movies...</h3>}
         {moviesOnTheater.length > 0 && latestMovies()}
+        {/* <Suspense fallback={<h3>Loading...</h3>}>{latestMovies()}</Suspense> */}
       </div>
     </>
   );
