@@ -7,6 +7,7 @@ import axios from "axios";
 
 const Home = (props) => {
   const [moviesOnTheater, setMoviesOnTheater] = useState([]);
+  const [spin, setSpin] = useState(true);
 
   useEffect(() => {
     const getLatestMovies = async () => {
@@ -19,17 +20,30 @@ const Home = (props) => {
       } catch (error) {}
     };
     getLatestMovies();
+    loadSpinner();
   }, []);
 
   const latestMovies = () => {
     return <Carousel moviesOnTheater={moviesOnTheater} />;
   };
+  const loadSpinner = () => {
+    setTimeout(() => {
+      console.log("fdfdfdf");
+      setSpin(false);
+    }, 3000);
+  };
 
   return (
     <>
       <div class="container-fluid">
-        {moviesOnTheater.length == 0 && <h3>Loading movies...</h3>}
-        {moviesOnTheater.length > 0 && latestMovies()}
+        {spin == true && (
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        )}
+        {moviesOnTheater.length > 0 && spin == false && latestMovies()}
       </div>
     </>
   );
