@@ -28,22 +28,21 @@ const Home = (props) => {
   };
   const loadSpinner = () => {
     setTimeout(() => {
-      console.log("fdfdfdf");
       setSpin(false);
-    }, 3000);
+    }, 2000);
   };
 
   return (
     <>
       <div class="container-fluid">
-        {spin == true && (
+        {spin && (
           <div class="d-flex justify-content-center">
             <div class="spinner-border" role="status">
               <span class="sr-only">Loading...</span>
             </div>
           </div>
         )}
-        {moviesOnTheater.length > 0 && spin == false && latestMovies()}
+        {moviesOnTheater.length > 0 && !spin && latestMovies()}
       </div>
     </>
   );
